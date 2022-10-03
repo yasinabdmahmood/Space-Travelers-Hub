@@ -14,7 +14,7 @@ function Rockets() {
 
       {rockets.map((el) => (
         <div key={el.id} className={style.item}>
-          <img src={el.flickr_images} alt="Rocket image" />
+          <img src={el.flickr_images} alt="Rocket" />
           <div className={style.info}>
             <h1>{el.rocket_name}</h1>
             <p>{el.description}</p>
