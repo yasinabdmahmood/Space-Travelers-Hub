@@ -35,7 +35,7 @@ export const rockestSlice = createSlice({
         rocket_name: el.rocket_name,
         description: el.description,
         flickr_images: el.flickr_images[0],
-        reserved: false,
+        reserved: true,
       }));
       return rockets;
     });

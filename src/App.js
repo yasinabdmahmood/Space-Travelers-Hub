@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getRockets } from './redux/rockets/rocketReducer';
+import { getMissions } from './redux/Missions/missionsReducer';
 import Rockets from './components/rockets/Rockets';
 import Navbar from './components/navbar/Navbar';
 import Missions from './components/missions/Missions';
@@ -12,6 +13,9 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getRockets());
+  }, []);
+  useEffect(() => {
+    dispatch(getMissions());
   }, []);
   return (
     <>
