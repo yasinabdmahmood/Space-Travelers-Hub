@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rockets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocket-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-list li {
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px  solid black;
+}

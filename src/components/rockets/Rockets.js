@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRockets, toggleReservation } from '../../redux/rockets/rocketReducer';
+import { toggleReservation } from '../../redux/rockets/rocketReducer';
 import style from './rockets.module.css';
 
 function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getRockets());
-  }, []);
   return (
     <div className={style.container}>
 
@@ -17,7 +13,15 @@ function Rockets() {
           <img src={el.flickr_images} alt="Rocket" />
           <div className={style.info}>
             <h1>{el.rocket_name}</h1>
-            <p>{el.description}</p>
+            <p>
+              <button
+                type="submit"
+                className={el.reserved ? style.reserved : style.hide}
+              >
+                Reserved
+              </button>
+              {el.description}
+            </p>
             <button
               type="submit"
               onClick={() => dispatch(toggleReservation(el.id))}
