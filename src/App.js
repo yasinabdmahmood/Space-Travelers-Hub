@@ -1,13 +1,28 @@
 import './App.css';
-import { Provider } from 'react-redux';
-import store from './redux/configureStore';
+import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getRockets } from './redux/rockets/rocketReducer';
 import Rockets from './components/rockets/Rockets';
+import Navbar from './components/navbar/Navbar';
+import Missions from './components/missions/Missions';
+import Profile from './components/profile/Profile';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRockets());
+  }, []);
   return (
-    <Provider store={store}>
-      <Rockets />
-    </Provider>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/profile" exact element={<Profile />} />
+        <Route path="/missions" exact element={<Missions />} />
+        <Route path="/" exact element={<Rockets />} />
+      </Routes>
+    </>
+
   );
 }
 
