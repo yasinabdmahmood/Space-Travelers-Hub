@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if the component has changed 1`] = `
+<div
+  className="container"
+  data-testid="list-of-rockets"
+/>
+`;

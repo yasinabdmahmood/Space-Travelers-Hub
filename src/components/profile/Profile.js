@@ -5,7 +5,7 @@ function Profile() {
   const rockets = useSelector((state) => state.rockets);
   const missions = useSelector((state) => state.missions);
   return (
-    <div className={style.container}>
+    <div className={style.container} data-testid="main-container">
       <div className={style.missions}>
         <h1>My Missions</h1>
         <ul className={style['rocket-list']}>

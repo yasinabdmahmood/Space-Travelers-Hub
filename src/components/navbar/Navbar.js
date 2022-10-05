@@ -6,7 +6,7 @@ import style from './navbar.module.css';
 
 function Navbar() {
   return (
-    <nav className={style.navbar}>
+    <nav className={style.navbar} data-testid="main-container">
       <div>
         <img className={style.logo} alt="logo" src={logo} />
         <span>Space Travelers Hub</span>

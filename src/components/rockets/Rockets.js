@@ -6,7 +6,7 @@ function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
   return (
-    <div className={style.container}>
+    <div className={style.container} data-testid="list-of-rockets">
 
       {rockets.map((el) => (
         <div key={el.id} className={style.item}>
