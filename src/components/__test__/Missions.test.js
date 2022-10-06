@@ -19,7 +19,7 @@ it('the component should render a div ', () => {
   render(
     <Provider store={store}>
       <Missions />
-    </Provider>
+    </Provider>,
   );
 
   const mission = screen.getByTestId('list-of-missions');
