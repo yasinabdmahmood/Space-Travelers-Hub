@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if the component has changed 1`] = `
+<table
+  className="table"
+  data-testid="list-of-missions"
+>
+  <thead
+    className="thead"
+  >
+    <tr
+      className="header"
+    >
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+         
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
