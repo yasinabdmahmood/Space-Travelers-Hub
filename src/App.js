@@ -13,10 +13,10 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getRockets());
-  }, []);
+  });
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
+  });
   return (
     <>
       <Navbar />

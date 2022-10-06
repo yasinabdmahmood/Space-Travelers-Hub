@@ -8,7 +8,7 @@ function Missions() {
   const dispatch = useDispatch();
   return (
     <>
-      <table className={style.table}>
+      <table className={style.table} data-testid="list-of-missions">
         <thead className={style.thead}>
           <tr className={style.header}>
             <th>Mission</th>
